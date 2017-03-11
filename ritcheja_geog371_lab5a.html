@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>General George Patton</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!--storymap stylesheet -->
+    <link rel="stylesheet" type="text/css" href="storymap.css" />
+
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--add ajax based data transmission-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--storymap javascript library -->
+    <script src="storymap.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 main">
+            <h2 class="page-header">Movements of George Patton during World War II<br/></h2>
+            <img src="img/george-patton1.jpg" class="img-responsive" alt="responsive image">
+            <section data-scene="scene1">
+                <h2>Intro</h2>
+                <p style="font-size: 18px">By 1942, the German's had seized control of almost all of Europe, advanced east to Moscow and Stalingrad, and controlled almost all of
+                    Northern Africa. Great Britain and the Soviet Union had resist their further advancement to this point. With the United States joining the Allies after
+                    the attack on Pearl Harbor, the hope was that they could halt and push back the German advances. General George Patton was one such leader that would make this
+                    goal a reality. This map illustrates his movements during the war and illustrates the German retreat during that period of time.</p>
+            </section>
+
+            <section data-scene="scene2">
+                <h2>Arriving in Africa in 1942</h2>
+                <p style="font-size: 18px">Patton was assigned to lead the Allied invasion in the
+                    French territories of Northern Africa. This campaign would be known as Operation Torch. His forces made landfall on November 8, 1942 and had captures back
+                Casablanca, Morocco by November 11th. </p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <section data-scene="scene3">
+                <h2>Sicily Campaign</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <section data-scene="scene4">
+                <h2>Phantom Army</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <section data-scene="scene5">
+                <h2>Normandy and Battle of the Bulge</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <section data-scene="scene6">
+                <h2>Push into Germany</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <section data-scene="scene7">
+                <h2>Death in Heidelberg</h2>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+            </section>
+
+            <div class="glyphicon glyphicon-chevron-down arrow-down"></div>
+        </div>
+
+        <div id="map" class="col-sm-0 col-md-0 sidebar"></div>
+
+    </div>
+
+</div>
+<script type="text/javascript">
+
+    var layers = {
+        'layer 1': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {id: 'mapbox.light'}), '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'],
+        'layer 2': [ L.geoJson.ajax('http://www.mapio.us/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson', {color: 'orange', weight: 5}), '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>']
+    };
+
+    var scenes = {
+        scene1: {lat: 48, lng: 5, zoom: 4, layers: ['layer 1']},
+        scene2: {lat: 33.53333, lng: -9.583333, zoom: 6, layers: ['layer 2']},
+        scene3: {lat: 37.5, lng: 13, zoom: 8, layers: ['layer 1', 'layer 2']},
+        scene4: {lat: 51, lng: 0, zoom: 8, layers: ['layer 1', 'layer 2']},
+        scene5: {lat: 51, lng: 3, zoom: 7, layers: ['layer 1', 'layer 2']},
+        scene6: {lat: 51, lng: 7, zoom: 6, layers: ['layer 1', 'layer 2']},
+        scene7: {lat: 49.40, lng: 8.6, zoom: 11, layers: ['layer 1', 'layer 2']}
+    };
+
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        legend: true
+    });
+</script>
+</body>
+</html>
