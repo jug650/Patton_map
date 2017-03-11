@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>General George Patton</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+    <!--storymap stylesheet -->
+    <link rel="stylesheet" type="text/css" href="storymap.css" />
+
+    <!--add required libraries-->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--add ajax based data transmission-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--storymap javascript library -->
+    <script src="storymap.js"></script>
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="The Movements of George Patton during WWII" />
+    <meta property="og:url" content="http://cdn.rawgit.com/jakobzhao/storymap/master/index.html" />
+    <meta property="og:description" content="This is an example of story map." />
+    <meta property="og:image" content="img/social.png" />
+
+    <!--facebook and info icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="dist/img/usflag_favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 main">
+            <h2 class="page-header">Movements of George Patton during World War II<br/></h2>
+            <img src="dist/img/george-patton1.jpg" class="img-responsive" alt="responsive image">
+            <section data-scene="scene1">
+                <h2>Intro</h2>
+                <p style="font-size: 18px">By 1942, the German's had seized control of almost all of Europe, advanced east to Moscow and Stalingrad, and controlled almost all of
+                    Northern Africa. Great Britain and the Soviet Union had resist their further advancement to this point. With the United States joining the Allies after
+                    the attack on Pearl Harbor, the hope was that they could halt and push back the German advances. General George Patton was one such leader that would make this
+                    goal a reality. This map illustrates his movements during the war and illustrates the German retreat during that period of time.</p>
+            </section>
+
+            <section data-scene="scene2">
+                <h2>Arriving in Africa in 1942</h2>
+                <img src="dist/img/rommel1.jpg">
+                <p style="font-size: 18px">Patton was assigned to lead the Allied invasion in the
+                    French territories of Northern Africa. This campaign would be known as Operation Torch. His forces made landfall on November 8, 1942 and had captures back
+                Casablanca, Morocco by November 11th. Afterwards, Patton oversaw Casablanca's transition in military
+                port and hosted the famous meeting between President Roosevelt and Prime Minister Churchill known as the Casablanca Conference.</p>
+                <p style="font-size: 18px">Due to his great success, the German's enlisted their top battlefield commander, General Erwin Rommel.
+                Rommel was successful at the Battle of Kasserine Pass on March 6, 1943, which led to Patton assuming command of the II Corps. At which
+                time, Patton made many operational changes that were intended to increase his troops discipline and effectiveness.
+                From that point on, Patton had the German's on the run. Begining with his victory at the Battle of El Guettar on March 17, 1943.</p>
+                <p style="font-size: 18px">After he successfully drove the Germans out of Africa, he handed over command of the II Corps to General Omar
+                    Bradly. At which time, Patton returned to Casablanca to plan for the Allied invasion of the island of Sicily.</p>
+            </section>
+
+            <section data-scene="scene3">
+                <h2>Sicily Campaign</h2>
+                <img src="dist/img/patton_sicily1.jpg">
+                <p style="font-size: 18px">Patton took command of the Seventh Army, which was comprised of 90,000 men. His forces
+                made landfall in Sicily on July 10, 1943. This campaign would be known as Operation Husky. Along with the British General
+                Bernard Montgomery, their goal was to retake the island. However, a strong rivalry would form between the two generals. This lead
+                Patton to taking some actions that were seemed controversial. One such case was when he was ordered to hault his attack on Messina. His staff responded to
+                the order by claiming that they were not receiving there transmission. After that, Patton continued his attack and captured Messina anyways. Perhaps his most famous
+                    incident was when he slapped two of his men that were being treated for "battle fatigue". Believing that this condition was a cowardly way to get out of the fight,
+                    Patton ordered both men back to the front. For these actions, he was punished personally by General Dwight Eisenhower. Many believe that his aggressive behavior was
+                    fueled by his desire to out perform Montgomery in pushing the German and Italians from the island. Ultimately, he was successful when the last Axis troops, 40,000 Germans and 70,000 Italians, evacuated the island.
+                </p>
+
+            </section>
+
+            <section data-scene="scene4">
+                <h2>Phantom Army</h2>
+                <img src="dist/img/d-day1.jpg">
+                <p style="font-size: 18px">Realizing that the Germans regarded Patton as the best Allied battle commander, the Allies developed a plan called Operation Fortitude. The plan was to develop a false plan of attack of attack for the Allied Normandy invasion.
+                    The German's simply could not believe that Patton would not be involved in the Normandy invasion. Using Patton as a decoy, the Allies real battle plan would be known as Operation Overload and was executed on June 6, 1944.</p>
+            </section>
+
+            <section data-scene="scene5">
+                <h2>Normandy and Battle of the Bulge</h2>
+                <img src="dist/img/bulge1.jpg">
+                <p style="font-size: 18px">After D-Day, Patton's Third Army became active on August 1, 1944. He was tasked with attacking to the south and east flank of the Allied forces.
+                Meet with lighter resistance, Patton again relied on speed to overwhelm the German forces. They were progressing at a rate of 60 miles every two weeks.
+                    To sustain such a rate, Patton relied greatly on reliable intelegence. Luckily for him, his forces possessed more intelligence officers than any of the other.</p>
+            <p style="font-size: 18px">By December of 1942, the German's knew that things were getting desperate. In a last ditch effort to turn the tide, they launched a major offensive across
+                Belgium, Luxembourg, and northern France. This would be known as the Battle of the Bulge. General Eisenhower asked Patton to develop a plan that would push back the Germans and relieve
+            the men of the 101st Airbourne that were completely surrounded in the city of Bastogne. On December 22, Patton was ordered to counter attack. Within days, he had mobilized 133,000 vehicles to move the troops and supplies that
+            would be needed to retake the area. By December 26th, his forces had reached Bastogne. He was quoted as saying the this campaign was "the most brilliant operation
+            we have thus performed, and it is in my opinion the outstanding achievement of the war. This is my biggest battle." Confident as ever.</p>
+            </section>
+
+            <section data-scene="scene6">
+                <img src="dist/img/color1.jpg">
+                <h2>Push into Germany</h2>
+                <p style="font-size: 18px">By March of the following year, Patton's Third Army had captured a sizable portion of western Germany. If fact, it is said that Patton was ordered to
+                bypass the city of Trier due to the belief that it would take 4 army division. His response to the order was, "Have taken Trier with two divisions. Do you want me to give it back?" Again highlighting his persona. Wanting to reach Berlin before the Soviets, he was instead ordered to push to Bavaria. He ultimately stopped just before reaching Prague, when the Germans surrendered
+                    on May 8, 1945, ending the war in Europe.</p>
+            </section>
+
+            <section data-scene="scene7">
+                <img src="dist/img/funeral.jpg">
+                <h2 >Death in Heidelberg</h2>
+                <p style="font-size: 18px">After the conclusion of the war in Europe, Patton tried very hard to get a command in the Pacific theater. He took some extended leave to see family and visit families of the fallen soldiers. After his rest, Patton was appointed the military governor of Bavaria. When the war concluded, Patton felt that he had no purpose and his behavior had become
+                more erratic. After making some controversial comments to the press about the Nazi Party, Eisenhower relieved him of his governorship and command of the Third Army in the fall of 1945. His last command would be the 15th US Army based in Bad Nauheim, Germany. On December 8, 1945, Patton was on his way to hunt pheasants when he was in a severe car crash. Bleeding badly and having a severe strike to the head, he was rushed to the
+                hospital in Heildberg. There it was discovered that he had a fractured neck and was paralyzed. Due to the complications of his injury, he died of pulmonary edema and congestive heart failure on December 21, 1945. As per his request, he was buried at the Luxembourg American Cemetery next to the his men that were lost from the Third Army.</p>
+            </section>
+
+            <div class="glyphicon glyphicon-chevron-down arrow-down"></div>
+        </div>
+
+        <div id="map" class="col-sm-0 col-md-0 sidebar"></div>
+
+    </div>
+
+</div>
+<script type="text/javascript">
+
+    var layers = {
+        'layer 1': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {id: 'mapbox.light'}), '<i style="background: red; opacity: 0.5"></i><p><b>1942 Extent of German Rule</b></p>'],
+        'layer 2': [ L.geoJson.ajax('http://www.mapio.us/geoserver/ceoas/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ceoas:admin&outputFormat=application%2Fjson')],
+        'layer 3': [ L.geoJson.ajax('dist/assets/german_1942control.geojson', {color: 'red', weight: 5}) ],
+        'layer 4': [ L.geoJson.ajax('dist/assets/germany.geojson', {color: 'green', weight: 5})],
+        'layer 5': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw')],
+        'layer 6': [ L.geoJson.ajax('dist/assets/bulge.geojson', {color: 'orange', weight: 5})],
+        'layer 7': [ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {id: 'mapbox.light'}), '<i style="background: Orange; opacity: 0.5"></i><p><b>Region of the Battle of the Bulge</b></p>'],
+        'marker 1': [L.marker([33.57311, -7.58984])],
+        'marker 2': [L.marker([37.3094, 13.58598])],
+        'marker 3': [L.marker([51.12787, 1.3134])],
+        'marker 4': [L.marker([50.50388, 4.46993])],
+        'marker 5': [L.marker([49.39875, 8.67243])]
+    };
+
+    var scenes = {
+        scene1: {lat: 48, lng: -4, zoom: 4, layers: ['layer 1', 'layer 3']},
+        scene2: {lat: 33.53333, lng: -9.583333, zoom: 6, layers: ['layer 2', 'marker 1']},
+        scene3: {lat: 37.5, lng: 13, zoom: 8, layers: ['layer 2', 'marker 2']},
+        scene4: {lat: 51, lng: 0, zoom: 8, layers: ['layer 2', 'marker 3']},
+        scene5: {lat: 51, lng: 3, zoom: 7, layers: ['layer 6', 'layer 7']},
+        scene6: {lat: 51, lng: 7, zoom: 6, layers: ['layer 2', 'layer 4']},
+        scene7: {lat: 49.40, lng: 8.6, zoom: 11, layers: ['layer 2', 'marker 5']}
+    };
+
+    $('.main').storymap({
+        scenes: scenes,
+        layers: layers,
+        legend: true
+    });
+</script>
+
+</div>
+<!--facebook icon-->
+<a class="fa fa-facebook-square btn" href="https://facebook.com/sharer.php?u=http://cdn.rawgit.com/jakobzhao/storymap/master/index.html" target="_blank"></a>
+<!--info icon-->
+<i class="fa fa-info-circle btn" style="top:50px" data-toggle="modal" data-target="#info-modal"></i>
+
+<!--the info page-->
+<div class="modal fade" id="info-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">About</h4>
+            </div>
+            <div class="modal-body">
+                <p>This is a web map that discusses the movements of General George Patton during the Second World War. It begins with his arrival in Africa and ends with his death in Germany.
+                    It is done for project assignment for GEOG 371: Web Mapping provided by Oregon State University. The story map library is derived from the storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality relies on both leaflet and Boostrap.</p>
+                <p><b>storymap.js</b> | Released Date: 03/09/2017 | Version: 1.0 | MIT License</p>
+                <p><b>Author: Jared Ritchey</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University </p>
+                <p>The context about General Patton was collected from Wikipedia.</p>
+                <p>The favicon image was acquired from <a>http://www.clipartkid.com/images/33/united-states-flag-clip-art-cliparts-co-m72OI3-clipart.png.</a></p>
+                <p>This story map uses geospatial data from mapbox and Leaflet.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
